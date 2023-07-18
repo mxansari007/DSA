@@ -1,13 +1,19 @@
-bool isPowerOfTwo(int n)
-{	
-    // Write your code here.
-    while(n>>1){
-        if(n%2 != 0){
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        
+        if(n == 0){
             return false;
         }
-        n=n>>1;
+
+        if(n == INT_MIN){
+            return false;
+        }
+
+        if((n & (n-1)) == 0){
+            return true;
+        }
+
+        return false;
     }
-
-    return true;
-
-}
+};

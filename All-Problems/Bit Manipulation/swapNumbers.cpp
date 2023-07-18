@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int a,b,swapper;
+    int a,b;
 
     a = 7;
     b = 5;
@@ -10,10 +10,10 @@ int main(){
     cout<<"Before Swapping a is : "<<a<<endl;
     cout<<"Before Swapping b is : "<<b<<endl;
 
-    swapper = a ^ b;
+    
 
-    a = a ^ swapper;
-    b = b ^ swapper;
+    a = a ^ a ^ b;
+    b = b ^ a ^ b;
 
     cout<<"After Swapping a is : "<<a<<endl;
     cout<<"After Swapping b is : "<<b<<endl;
